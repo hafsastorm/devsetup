@@ -15,6 +15,7 @@ alias cdt="cd /prod/www/template/manmade"
 alias cdb="cd /prod/www/template/omnibus"
 alias news="cd /mnt/s3/news"
 alias cdwm="cd /prod/www/apache/htdocs/scripts/wundermap/src/dev/"
+alias cdwm="cd /prod/www/apache/htdocs/scripts/wundermap/src/wu4/dev/"
 alias cdpd="cd /prod/www/template/manmade/Pages/WeatherStation/Dashboard"
 alias cdbrands="cd /software/dist/newspaper/newspaper/brands"
 alias cdpapers="cd /software/dist/newspaper/newspaper/papers"
@@ -34,6 +35,7 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
+PS1="\u@\h:\`pwd\` \$ "
 
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
