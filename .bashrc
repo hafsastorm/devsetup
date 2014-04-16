@@ -35,7 +35,7 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
-PS1="\u@\h:\`pwd\` \$ "
+PS1="\u@\e[1;32m\]\h\e[0m\]:\`pwd\` \$ "
 
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
