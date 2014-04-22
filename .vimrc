@@ -13,7 +13,7 @@ set background=dark
 set backupext=.bak
 set showmatch
 set ts=2
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 so ~/vimsyntax/cst.vim
 
