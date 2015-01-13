@@ -1,0 +1,6 @@
+#!/bin/sh
+#Use this to add packages to your machine when running wu_setup_dev
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
