@@ -3,4 +3,8 @@
 
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+#need to install node... to get npm... to install react-tools... to run jsx... to precompile react code into plain js
+curl -sL https://rpm.nodesource.com/setup | bash -
+yum install -y nodejs
+npm install -g react-tools
 
