@@ -8,13 +8,13 @@ alias tropics="vim /prod/www/template/manmade/Parts/TropicExtLinks.cst"
 alias tropics2="vim /prod/www/template/manmade/Parts/TropicHurrArchive.cst"
 alias ll="ls -lat | more"
 alias cda="cd /software/dist/admin/AS5000"
-alias cdc="cd /code/www/findweather/hdf"
-alias cdh="cd /prod/www/apache/htdocs"
+alias cdc="cd /code/www/findweather/hdf; source ~/.bashrc"
+alias cdh="cd /prod/www/apache/htdocs; source ~/.bashrc"
 alias sassy="cd /prod/www/apache/htdocs/scss"
-alias cdt="cd /prod/www/template/manmade"
-alias cdb="cd /prod/www/template/omnibus"
+alias cdt="cd /prod/www/template/manmade; source ~/.bashrc"
+alias cdb="cd /prod/www/template/omnibus; source ~/.bashrc"
 alias news="cd /mnt/s3/news"
-alias cdwm="cd /prod/www/apache/htdocs/scripts/wundermap/src/wu4/stable/"
+alias cdwm="cd /prod/www/apache/htdocs/scripts/wundermap/src/wu4/stable/; source ~/.bashrc"
 alias cdwm4="cd /prod/www/apache/htdocs/scripts/wundermap/src/wu4/stable/"
 alias cdpd="cd /prod/www/template/manmade/Pages/WeatherStation/Dashboard"
 alias cdbrands="cd /software/dist/newspaper/newspaper/brands"
@@ -47,6 +47,12 @@ if [ -f /etc/bash_completion.d/git ]; then
 	GIT_PS1_SHOWDIRTYSTATE=1
 	GIT_PS1_SHOWSTASHSTATE=1
 	PS1='\u@\e[1;32m\]\h\e[0m\]\e[1;34m\]$(__git_ps1)\e[0m\]:\w \$ '
+  if [ "$(__git_ps1)" == " (master)" ]; then
+      PS1='\u@\e[1;32m\]\h\e[0m\]\e[1;31m\]$(__git_ps1)\e[0m\]:\w \$ '
+  fi
+  if [ "$(__git_ps1)" == " (master *)" ]; then
+      PS1='\u@\e[1;32m\]\h\e[0m\]\e[1;31m\]$(__git_ps1)\e[0m\]:\w \$ '
+  fi
 fi
 
 export PS1
@@ -54,3 +60,6 @@ export PS1
 
 #Make git log awesome
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
+
+export PATH=/opt/centos/devtoolset-1.1/root/usr/bin/:$PATH
+export PATH=/usr/local/bin/:$PATH
